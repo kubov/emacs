@@ -41,7 +41,7 @@
 
 (define-key lisp-mode-map (kbd "TAB") 'slime-indent-and-complete-symbol)
 
-
 (global-unset-key (kbd "C-t")) ;; don't like transpose-chars
+(global-set-key (kbd "C-t") 'magit-status)
 
 (provide 'user-keys)

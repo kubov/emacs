@@ -7,9 +7,8 @@
 
 (setq common-lisp-hyperspec-root
       "file://localhost/usr/share/doc/hyperspec/HyperSpec/")
-
-					;(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
-					;(add-to-list 'package-archives '("technomancy" . "http://repo.technomancy.us/emacs/") t)
+;(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
+;(add-to-list 'package-archives '("technomancy" . "http://repo.technomancy.us/emacs/") t)
 
 
 

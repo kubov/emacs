@@ -22,7 +22,6 @@
 (add-to-list 'package-archives 
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
-
 (paredit-mode)
 (load-theme 'misterioso)
 (powerline-default-theme)
@@ -31,17 +30,29 @@
 (yas-global-mode 1)
 (setf flymake-mode t)
 
+(set-face-attribute 'mode-line nil
+                    :background "#2aa198"
+                    :box nil)
+(set-face-attribute 'mode-line-inactive nil
+                    :box nil)
+
 (defun vlad-cc-style()
   (c-set-style "linux")
-  (c-set-offset 'innamespace '0)
-  (c-set-offset 'inextern-lang '0)
-  (c-set-offset 'inline-open '0)
-  (c-set-offset 'label '*)
-  (c-set-offset 'case-label '*)
-  (c-set-offset 'access-label '/)
+;  (c-set-offset 'innamespace '0)
+;  (c-set-offset 'inextern-lang '0)
+;  (c-set-offset 'inline-open '0)
+;  (c-set-offset 'label '*)
+;  (c-set-offset 'case-label '*)
+;  (c-set-offset 'access-label '/)
   (setq c-basic-offset 4)
   (setq tab-width 4)
-  (setq indent-tabs-mode nil)
+ (setq indent-tabs-mode nil)
 )
 
+(setq tab-width 4)
+(setq indent-tabs-mode nil)
+
+(add-hook 'c-mode-hook 'vlad-cc-style)
 (add-hook 'c++-mode-hook 'vlad-cc-style)
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
